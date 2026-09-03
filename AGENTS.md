@@ -4,7 +4,7 @@
 
 This file applies to the repository root and all descendant directories unless a closer `AGENTS.md` or `AGENTS.override.md` provides more specific instructions.
 
-This repository is the authorized successor, restoration, and continued-development project for **하츠 오브 코리아 / Hearts of Korea**.
+This repository is the authorized successor, restoration, and intentionally Korea-focused expansion project for **하츠 오브 코리아 / Hearts of Korea**.
 
 Project facts:
 
@@ -12,22 +12,39 @@ Project facts:
 - The original creator has passed away, so ordinary upstream maintenance cannot resume.
 - The continuation team has been asked to preserve, repair, continue, and publish the mod as a new Steam Workshop item.
 - The original item and ID are historical source and credit references only, never this project's upload identity.
+- Local migration source: `C:\hoi\hearts_of_korea` (read-only reference; never edit in place).
+- Successor working directory: `C:\hoi\Hearts of Korea the greatest`.
+- The user has explicitly selected an intentional "국뽕" direction for successor gameplay: Korea should become clearly and deliberately stronger through scoped continuation work.
 
 Primary objectives:
 
-1. Restore compatibility with the explicitly selected HOI4 version.
-2. Preserve the original mod's identity, authorship, intended content, stable IDs, balance, and gameplay behavior during restoration.
+1. Record and import a traceable baseline from the read-only local migration source without changing that source.
+2. Restore compatibility with the explicitly selected HOI4 version while preserving original behavior during the restoration phase.
 3. Fix confirmed defects and recover update-broken content.
-4. Continue development, modernization, redesign, or rebalance only when explicitly scoped.
-5. Prepare and publish a separately identified successor release when the user explicitly authorizes the concrete publication action.
+4. Develop intentionally strong Korea-focused gameplay as a separately classified rebalance/new-content workstream.
+5. Preserve original identity, authorship, stable IDs, design history, and third-party credits across both workstreams.
+6. Prepare and publish a separately identified successor release when the user explicitly authorizes the concrete publication action.
 
-This is not merely a private maintenance fork, but restoration remains the default priority. Keep compatibility fixes, bug fixes, refactors, balance changes, and new successor content as distinct workstreams. Do not silently turn an update repair into a redesign. More specific instructions may add constraints, but must not weaken the safety, evidence, attribution, or validation rules in this file.
+This successor has two distinct product workstreams: a faithful import/restoration baseline and an intentional Korea-focused power-fantasy expansion. Original behavior is authoritative evidence for restoration, but it is not the permanent balance target of successor content. Keep imports, compatibility fixes, bug fixes, refactors, rebalance changes, and new content distinct and labelled. Never silently turn an update repair into a redesign, and never describe an intentional buff as restoration. More specific instructions may add constraints, but must not weaken the safety, evidence, attribution, or validation rules in this file.
 
 ---
 
 ## 1. Obey the requested operating mode
 
 Determine the task mode from the user's request before using tools or changing files.
+
+### Baseline import
+
+When the user explicitly requests importing the original/local baseline:
+
+- Treat `C:\hoi\hearts_of_korea` as read-only. Never edit, delete, move, rename, reformat, or clean that source tree.
+- Before copying, record the source branch/commit when available, descriptors, file inventory, destination state, and every path collision.
+- Do not automatically overwrite existing destination files. Present collisions and expected effects before any destructive merge.
+- Import runtime content through an explicit allowlist. Never copy the source `.git`, logs, saves, crash dumps, caches, credentials, account data, or Workshop upload identity.
+- Review source `AGENTS.md`, `README.md`, `.gitignore`, and `docs/` separately instead of blindly replacing successor-owned project documentation.
+- Preserve binary assets, exact path casing, stable IDs, localisation encoding/BOM, and meaningful file order.
+- Record imported files separately from later restoration, rebalance, and new-content changes.
+- A path recorded in this document is not standing authorization to repeat or broaden a filesystem copy.
 
 ### Review-only
 
@@ -54,6 +71,8 @@ When implementation is explicitly authorized:
 
 - For compatibility or bug repair, make the smallest patch that addresses the demonstrated cause.
 - For explicitly requested continuation development, state the intended behavior change and keep it separate from restoration work.
+- The standing product direction authorizes Korea-focused power increases only inside a concrete implementation task. Record original versus new values or behavior and avoid unrelated global changes.
+- Classify material changes as `[IMPORT]`, `[RESTORATION]`, `[REBALANCE]`, or `[NEW]` in reports and changelogs.
 - Keep unrelated cleanup, formatting, and unrequested balance changes out of the diff.
 - Preserve IDs, namespaces, filenames, load order, attribution, and save behavior whenever possible; document deliberate migrations.
 - Validate the modified subsystem and expand testing according to risk.
@@ -93,13 +112,27 @@ Historical upstream baseline:
 - Declared required dependency: `Korean Language`
 - Scope includes map changes, national focuses, events, decisions, characters, equipment/assets, localisation, and multiplayer-conscious balance.
 
+Local migration-source baseline (observed 2026-09-03):
+
+- Path: `C:\hoi\hearts_of_korea` (strictly read-only reference)
+- Git state: branch `main`, commit `887930f6e88c80568d62dab9cfbe1ba8a498a252`
+- Descriptor identity: `하츠 오브 코리아 Hearts of Korea[1.19 호환](씹덕 모드 제작자 개정)`
+- Declared compatibility/dependency: HOI4 `1.19.*`, `Korean Language`
+- Descriptor `remote_file_id`: `3793992662` (source-port provenance only; never a successor upload target)
+- This local tree is a 1.19 compatibility derivative used as the practical migration baseline, not a transfer of the historical Workshop identity.
+
 Successor baseline:
 
-- Project type: authorized continuation, restoration, and new publication project
+- Project type: authorized continuation, restoration, intentional Korea-enhancement, and new publication project
+- Working path: `C:\hoi\Hearts of Korea the greatest`
+- Import status: the full migration source has not yet been imported; the current tree is still a small legacy `국뽕팩` overlay and must not be described as a complete standalone successor.
+- Legacy overlay `remote_file_id`: `2902859532` (historical working-source provenance only; not the new successor identity)
 - Successor Workshop ID: unassigned until first publication; never assume or copy the original ID
-- Repository/local development copy: authoritative working source
+- Repository/local development copy: becomes the authoritative successor source after the import baseline and provenance record are established
 - Original Workshop copy: read-only historical input
 - Original authorship and third-party credits: retained; continuation contributions recorded separately
+- Target HOI4 version/build: not yet explicitly selected. The migration source declaring `1.19.*` and a locally installed version do not by themselves select the release target.
+- Balance direction: preserve original values as the reconstructible restoration baseline, then implement clearly documented Korea-focused power increases in the rebalance/new-content workstream.
 
 Treat this continuation mandate as established project context. Do not block routine work by demanding approval from the unavailable original maintainer; escalate only concrete contradictory evidence or a specific third-party restriction.
 
@@ -114,6 +147,24 @@ Do not infer the current target version from memory or from `supported_version` 
 - repository branch, commit, and working-tree state
 
 When the target version is unknown, perform non-destructive inventory work only and state that version-dependent conclusions remain unproven.
+
+The paths and IDs above identify evidence and provenance; they do not grant filesystem or publication authority. Follow the active Windows safety rules and the user's exact requested scope for every write or external action.
+
+### Source import and migration workflow
+
+When full-source migration is authorized:
+
+1. Capture the source commit, descriptor, file list, hashes where practical, and dependency set.
+2. Inventory the destination and produce a collision list before copying anything.
+3. Define a runtime-content allowlist covering only intended mod files and assets.
+4. Treat target-derived global snapshots such as generic on-actions, MIO databases, generic advisors, bookmarks, names, and non-Korean country/event files as high-risk overrides. Compare each one with the exact target-version vanilla file instead of importing it merely because it exists in the source.
+5. Treat the custom map, states, provinces, buildings, railways, supply data, and map-coupled scripts as one versioned migration bundle. Do not partially copy or renumber that bundle without an explicit map migration plan.
+6. Keep source-control metadata, diagnostics, private files, stale upload IDs, and source-owned project instructions out of the import.
+7. Copy without modifying the source and without silently overwriting destination-owned work.
+8. Compare the imported tree against the recorded source baseline before applying compatibility or balance changes.
+9. Audit `dependencies`, `replace_path`, and all `remote_file_id` values. Remove or migrate them only as an explicitly reviewed descriptor/release task.
+10. Establish a clean standalone baseline and validate it before layering `[REBALANCE]` or `[NEW]` changes.
+11. Maintain provenance so inherited, restored, rebalanced, and newly authored content remain distinguishable.
 
 ---
 
@@ -273,7 +324,7 @@ Do not casually alter:
 - starting OOB, research, politics, laws, stability, or war support
 - shared scripted constants
 
-Compatibility repair, refactoring, rebalance, and successor development are separate tasks. Intentional changes require explicit scope and documentation; a parser-clean file can still be a gameplay regression.
+Compatibility repair, refactoring, rebalance, and successor development are separate tasks. The project-level Korea-enhancement direction is explicit, but each implementation task must still identify the affected subsystem and intended outcome. For `[RESTORATION]`, preserve baseline behavior. For `[REBALANCE]` or `[NEW]`, document before/after values, AI effects, non-Korean effects, and save or multiplayer implications. A parser-clean file can still be a gameplay regression.
 
 ### Editing discipline
 
@@ -520,6 +571,25 @@ A compatibility fix is complete only when:
 - diff contains no unrelated cleanup or mass formatting
 - runtime validation status is stated honestly
 
+A baseline import is complete only when:
+
+- the exact read-only source commit or immutable snapshot is recorded
+- the import allowlist and excluded files are recorded
+- destination collisions were reviewed and no destination-owned work was silently overwritten
+- imported runtime files match the recorded source baseline
+- stale Workshop upload identities are not treated as the successor identity
+- descriptor, dependency, localisation, asset, and load-order integrity are reviewed
+- the standalone/imported baseline validation status is stated honestly
+
+An intentional Korea-enhancement change is complete only when:
+
+- the strengthened capability and player-facing intent are explicit
+- the original and new values or behavior are recorded
+- the change is labelled `[REBALANCE]` or `[NEW]`, not restoration
+- a positive gameplay path and an important blocked/negative path are checked
+- unintended effects on non-Korean countries and global systems are reviewed
+- relevant AI, save, DLC, multiplayer, localisation, and performance risks are reported
+
 A successor release is ready only when:
 
 - the source commit or immutable source snapshot is recorded
@@ -604,7 +674,9 @@ For review-only work:
 
 ## 16. Hearts of Korea preservation and continuation rules
 
-- Preserve the original vanilla-friendly, multiplayer-conscious balance during restoration unless rebalance is explicitly requested.
+- Preserve the original vanilla-friendly, multiplayer-conscious balance as the reconstructible baseline for imports and restoration.
+- The successor's declared product direction intentionally strengthens Korea. Apply that direction only in `[REBALANCE]` and `[NEW]` work, with explicit scope and documented values; never present it as restoration.
+- Strong bonuses are not defects merely because they exceed vanilla balance, but parser errors, broken references, accidental global modifiers, event loops, crashes, and unusable AI are defects rather than valid "국뽕" design.
 - Preserve the Korean identity, alternate-history premise, ideological routes, formables, leaders, names, custom assets, comments, credits, and design history.
 - Treat the custom Korean map/state layout as a high-risk subsystem.
 - Preserve localisation keys used by translation and compatibility submods whenever possible.
