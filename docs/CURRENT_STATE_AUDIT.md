@@ -83,6 +83,28 @@ interwar_artillery
 연구 슬롯은 기본 2개, 중견국 3개, 국뽕 4개다. 후속 중점을 진행하면 대체로 5~6개에
 도달하도록 설계된 것으로 보인다. 시작 시 모든 연구가 완료되는 프리셋은 아니다.
 
+### 대상 프로젝트의 독립 시작 혁신 포인트 구현
+
+2026-09-03 구현 전 정적 확인 시점에 대상 프로젝트의 `common/on_actions` 폴더는 존재하지만
+`gookppong_on_actions.txt`를 포함한 실제 스크립트 파일은 없다. 원본의 동명 파일은
+`C:\hoi\hearts_of_korea`에 남아 있으며 읽기 전용 참고 자료다.
+
+원본 게임 규칙과 독립적으로 한국에 시작 혁신 포인트를 주는 새 on_action을 구현했다.
+현재 상태는 **게임 코드 정적 구현 완료, 런타임 미검증**이다.
+
+- 구현 상대 경로: `common/on_actions/hok_greatest_breakthrough_on_actions.txt`
+- 실행 지점: 등록된 `on_startup` 콜백
+- 수신 스코프: `KOR`
+- 효과: `add_breakthrough_points`, `specialization = all`, `value = 30`
+- 결과 의도: 육군·해군·공군·원자력에 각각 30점 추가
+- 적용 범위: 게임 규칙과 무관한 새 게임의 사람/AI 한국
+- 비적용 범위: 타국, 기존 세이브 소급
+- 충돌 방지: 원본 `gookppong_on_actions.txt`와 다른 고유 파일명 및 전용 국가 플래그 사용
+
+1.19.2 생성 문서상 효과의 국가 스코프와 `all` 인수는 **확인됨**이다. 그러나 실제 대상
+플레이셋에서 시작 직후 30점이 표시되는지는 아직 게임을 실행하지 않았으므로 **미검증**이다.
+자세한 구현 계약과 검증 기준은 `GREATEST_MODE_DESIGN.md`의 `GRT-211`에 기록했다.
+
 ## 현재 대상 애드온의 강화 방식
 
 대상 프로젝트는 문서화 전 기준선에서 18개 파일뿐인 소규모 애드온이며, 원본 전체가
@@ -260,6 +282,9 @@ AI 계획에는 별도 연구 블록도 없다.
 | `intelligence_operation_speed` 정의 | `documentation/modifiers_documentation.md:2977-2980` |
 | `set_technology` 효과 | `documentation/effects_documentation.md:7805-7817` |
 | 특수 프로젝트 완료 효과 | `documentation/effects_documentation.md:2896-2922` |
+| 혁신 포인트 직접 지급 효과와 국가 스코프 | `documentation/effects_documentation.md:788-803` |
+| 새 게임 시작 콜백 | `common/on_actions/_documentation.md:8` |
+| 네 혁신 전문 분야 ID | `common/special_projects/specialization/specializations.txt:2-18` |
 | 네 시설 건물 정의 | `common/buildings/00_buildings.txt:126,500,533,556` |
 
 라인 번호는 조사한 소스 커밋과 로컬 1.19.2.0 참조본에 고정된 값이며 파일이 바뀌면

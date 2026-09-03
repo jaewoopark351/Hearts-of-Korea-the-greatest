@@ -1,0 +1,24 @@
+# [NEW] Independent KOR startup breakthrough points.
+#20260903_kpopmodder
+on_actions = {
+	on_startup = {
+		effect = {
+			KOR = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = hok_greatest_breakthrough_initialized_v1
+						}
+					}
+
+					add_breakthrough_points = {
+						specialization = all
+						value = 30
+					}
+
+					set_country_flag = hok_greatest_breakthrough_initialized_v1
+				}
+			}
+		}
+	}
+}
