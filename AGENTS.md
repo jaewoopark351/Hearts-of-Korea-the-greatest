@@ -121,6 +121,13 @@ Local migration-source baseline (observed 2026-09-03):
 - Descriptor `remote_file_id`: `3793992662` (source-port provenance only; never a successor upload target)
 - This local tree is a 1.19 compatibility derivative used as the practical migration baseline, not a transfer of the historical Workshop identity.
 
+Local HOI4 vanilla reference:
+
+- Version: HOI4 `1.19.2`
+- Installation path: `C:\Program Files (x86)\Steam\steamapps\common\Hearts of Iron IV`
+- Treat this installation as the primary read-only vanilla syntax, schema, and behavior reference for 1.19.2 compatibility work.
+- Never modify the base-game installation. Exact executable build/checksum, enabled DLC, launcher playset, and load order must still be recorded before claiming tested compatibility.
+
 Successor baseline:
 
 - Project type: authorized continuation, restoration, intentional Korea-enhancement, and new publication project
@@ -131,7 +138,7 @@ Successor baseline:
 - Repository/local development copy: becomes the authoritative successor source after the import baseline and provenance record are established
 - Original Workshop copy: read-only historical input
 - Original authorship and third-party credits: retained; continuation contributions recorded separately
-- Target HOI4 version/build: not yet explicitly selected. The migration source declaring `1.19.*` and a locally installed version do not by themselves select the release target.
+- Target HOI4 version: `1.19.2`, using the local vanilla installation recorded above as the reference baseline. Exact build/checksum remains to be recorded before runtime compatibility claims.
 - Balance direction: preserve original values as the reconstructible restoration baseline, then implement clearly documented Korea-focused power increases in the rebalance/new-content workstream.
 
 Treat this continuation mandate as established project context. Do not block routine work by demanding approval from the unavailable original maintainer; escalate only concrete contradictory evidence or a specific third-party restriction.
