@@ -1,0 +1,119 @@
+buildings = {
+
+	# show_on_map:
+	#    if it is provincial building, then show_on_map = X is amount per each province
+	#    if it is state building, then show_on_map = X is amount per state
+	#
+	# province_max:
+	# if province_max is set, then building is provincial
+	#
+	## Modifiers:
+	## country_modifiers - accept only country modifiers
+	## state_modifiers - accept only state modifiers
+	## enable_for_controllers - Country modifiers will apply only if the controller of province/state is in the list, or if the list is empty
+	## Example:
+	#
+	# building = {
+	# 	country_modifiers = {
+	#      enable_for_controllers { GER ENG } # Here you can list countries which can accept the country modifiers of this building
+	# 		modifiers = {
+	#           #Here you can add country modifiers
+	#			political_power_factor = 2.0
+	#       }
+	#   }
+	#
+	#   state_modifiers = {
+	#       #Here you can add state modifiers
+	#   	local_building_slots_factor = 2
+	#   }
+	#
+	#   disable_grow_animation = yes # Disables the grow animation for the building, default = no
+	#   missing_tech_loc = <bindable localization> # See script concept bindable localization
+	#   repair_speed_factor = 0.5 # Optional. Factor for how fast the building is repaired (default = 1.0)
+
+	arms_factory_HoK = {
+		show_on_map = 6
+		base_cost = 7200
+		base_cost_conversion = 4000
+		military_production = 1
+		disabled_in_dmz = yes
+		icon_frame = 2
+		value = 8
+		infrastructure_construction_effect = yes
+		level_cap = {
+			shares_slots = yes
+			state_max = 400#20250605_kpopmodder
+		}
+	}
+
+	industrial_complex_HoK = {
+		show_on_map = 6
+		base_cost = 10800
+		base_cost_conversion = 9000
+		general_production = 1
+		icon_frame = 1
+		value = 5
+		infrastructure_construction_effect = yes
+		level_cap = {
+			shares_slots = yes
+			state_max = 400#20250605_kpopmodder
+		}
+	}
+	
+	dockyard_HoK = {
+		show_on_map = 1
+		show_on_map_meshes = 3
+		base_cost = 6400
+		only_costal = yes
+		naval_production = 1
+		icon_frame = 4
+		only_costal = yes
+		value = 5
+		infrastructure_construction_effect = yes
+		level_cap = {
+			shares_slots = yes
+			state_max = 500#20250605_kpopmodder
+		}
+	}
+
+	synthetic_refinery_HoK = {
+		show_on_map = 1
+		base_cost = 14500
+		icon_frame = 10
+		#local_resources_oil = 1 # May use local_resources_ + any resource name
+		local_resources_rubber = 1 # May use local_resources_ + any resource name
+		refinery = yes
+		value = 5
+		infrastructure_construction_effect = yes
+		show_modifier = yes
+
+		country_modifiers = {
+			modifiers = {
+				fuel_gain_from_states = 2.0 #per hour
+			}
+		}
+		level_cap = {
+			shares_slots = yes
+			state_max = 300#20250605_kpopmodder
+		}
+	}
+
+	fuel_silo_HoK = {
+		show_on_map = 1
+		base_cost = 5000
+		icon_frame = 14
+		value = 5
+		infrastructure_construction_effect = yes
+		fuel_silo = yes
+		per_level_extra_cost = -500
+		show_modifier = yes
+		country_modifiers = {
+			modifiers = {
+				max_fuel_building = 100.0 #k
+			}
+		}
+		level_cap = {
+			shares_slots = yes
+		}
+	}
+}

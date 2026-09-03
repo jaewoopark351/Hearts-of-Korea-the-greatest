@@ -1,0 +1,21 @@
+add_namespace = HoK_Greatest
+
+country_event = {
+    id = HoK_Greatest.0
+    title = HoK_Greatest.0.t
+    desc = HoK_Greatest.0.d
+    picture = GFX_report_event_kor_intro
+
+    is_triggered_only = yes
+	
+    option = {
+        name = HoK_Greatest.0.a
+        ai_chance = { factor = 1 }
+        set_rule = { can_declare_war_on_same_ideology = yes }
+        set_rule = { can_puppet = yes }
+        set_rule = { can_only_justify_war_on_threat_country = no }
+        set_rule = { can_send_volunteers = yes }
+        add_political_power = 1500
+		set_research_slots = 6
+    }
+}
