@@ -12,6 +12,7 @@ dependencies={
 	"하츠 오브 코리아 Hearts of Korea"
 	"[1.17] 하츠 오브 코리아 Hearts of Korea"
 	"하츠 오브 코리아 Hearts of Korea[1.19 호환](씹덕 모드 제작자 개정)"
+	"하츠 오브 코리아 Hearts of Korea[Road to 56 호환]"
 }
 thumbnail="thumbnail.png"
 name="Hearts of Korea 하츠 오브 코리아 국뽕팩"
