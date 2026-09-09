@@ -338,7 +338,10 @@ Compatibility repair, refactoring, rebalance, and successor development are sepa
 - Do not apply broad search-and-replace without reviewing every affected context.
 - Do not reformat an entire file for a local fix.
 - Preserve comments explaining historical intent or engine quirks.
-- Add comments only for non-obvious compatibility constraints.
+- Whenever code or script is modified, add a concise nearby change comment using the edit date and author tag in this exact form: `[YYYY-MM-DD]_kpopmodder: <brief change summary>` (for example, `[2026-09-09]_kpopmodder: 한국 중점 보상 수치를 상향 조정`).
+- The change comment must briefly state what was changed and, when it is not obvious, why it was changed. Keep it to one line when practical.
+- Use comment syntax valid for the edited file type (`#` for Paradox Script). If the file format does not support comments, do not introduce invalid syntax; record the same tagged note in the nearest applicable changelog or implementation record instead.
+- Apart from the required tagged change comments above, add comments only for non-obvious compatibility constraints.
 - Do not delete an unknown key merely to quiet `error.log`; determine whether it was renamed, moved, DLC-gated, or replaced.
 - Preserve exact filename and path casing, including on Windows.
 - Check braces, quotes, list structure, and block placement after edits.
