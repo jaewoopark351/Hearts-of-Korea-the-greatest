@@ -229,6 +229,8 @@ leader_traits = {
 	
 	KOR_industry_3 = {
 		random = no #20260903_kpopmodder
+		max_command_power = 500 # [2026-09-20]_kpopmodder: [REBALANCE] 지휘력 최대치 +500 추가
+		command_power_gain = 50 # [2026-09-20]_kpopmodder: [REBALANCE] 일일 지휘력 획득량 +50 추가
 
 		production_factory_max_efficiency_factor = 1.0 #생산효율성한도%
 		production_factory_efficiency_gain_factor = 1.5 #생산효율성성장%
@@ -304,7 +306,7 @@ leader_traits = {
 		military_industrial_organization_size_up_requirement = -0.99 #20260903_kpopmodder # 군수산업체 성장 요구량
 		military_industrial_organization_task_capacity = 10 #20260903_kpopmodder # 군수산업체 작업 수용량
 		
-		
+		repair_speed_factor = 5.0 #20260903_kpopmodder # 함선 수리 속도#20260920_kpopmodder
 		
 		########kpopmodder_20230907 #첩보 관련########
 		decryption_power = 50000 # 해독력 
@@ -476,7 +478,7 @@ leader_traits = {
 		army_defence_factor = 5.0 #사단방어력%
 		army_morale_factor = 0.9 #사단획복률%
 		experience_gain_army = 5 #육군점수획득력 매일
-		experience_gain_army_factor = 0.1 #육군점수획득량%
+		experience_gain_army_factor = 5.0 #육군점수획득량%#20260920_kpopmodder
 		army_attack_factor = 5.0 #사단공격력%
 		training_time_army_factor = -0.5 #사단훈련시간%
 		army_org_factor = 5.0 #사단조직력%
