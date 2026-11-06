@@ -1,6 +1,27 @@
-characters={
+# [2026-11-06]_kpopmodder: [RESTORATION] 최신 원본 인물 73개와 안정 ID를 반영하고 기존 국뽕 변경분 유지.
+characters = {
 
-	KOR_Syngman_Rhee={ #Democratic Leader 1
+	### Leaders ###
+
+	# Jirō Minami
+	KOR_jiro_minami = {
+		name = KOR_jiro_minami
+		portraits = {
+			civilian = {
+				large = GFX_portrait_KOR_jiro_minami
+				small = GFX_portrait_KOR_jiro_minami_small
+			}
+		}
+		#country_leader = {
+		#	ideology = oligarchism
+		#	traits = { JAP_governor_general_of_korea }
+		#	expire = "1965.1.1.1"
+		#	id = -1
+		#}
+	}
+
+	# Syngman Rhee
+	KOR_syngman_rhee={ #Democratic Leader 1
 		name=KOR_syngman_rhee
 		portraits={
 			civilian={
@@ -14,7 +35,124 @@ characters={
 			id=-1
 		}
 	}
-	
+
+	# Lyuh Woon-hyung
+	KOR_lyuh_woon_hyung = {
+		name = KOR_lyuh_woon_hyung
+		portraits = {
+			civilian = {
+				large = GFX_portrait_Yi_Kang
+			}
+		}
+		country_leader = {
+			ideology = centrism
+			expire = "1965.1.1.1"
+			traits = { KOR_mongyang }
+			id = -1
+		}
+	}
+
+	# Yi Kang
+	KOR_yi_kang = {
+		name = KOR_yi_kang
+		portraits = {
+			civilian = {
+				large = GFX_portrait_Yi_Kang
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1965.1.1.1"
+			traits = {  }
+			id = -1
+		}
+	}
+
+	# Kim Il-sung
+	KOR_kim_il_sung = {
+		name = KOR_kim_il_sung
+		portraits = {
+			civilian = {
+				large = GFX_portrait_KOR_kim_il_sung
+				small = GFX_portrait_KOR_kim_il_sung_small
+			}
+		}
+		country_leader = {
+			ideology = stalinism
+			traits = { KOR_suryong }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+
+	# Pak Hon-yong
+	KOR_pak_hon_yong = {
+		name = KOR_pak_hon_yong
+		portraits = {
+			civilian = {
+				large = GFX_portrait_KOR_pak_hon_yong
+				small = GFX_portrait_KOR_pak_hon_yong_civilian_small
+			}
+			army = {
+				small = GFX_portrait_KOR_pak_hon_yong_military_small
+			}
+		}
+		#country_leader = {
+		#	ideology = stalinism
+		#	traits = {  }
+		#	expire = "1965.1.1.1"
+		#	id = -1
+		#}
+	}
+
+	# Yi Un
+	KOR_yi_un = {
+		name = KOR_yi_un
+		portraits = {
+			civilian = {
+				large = GFX_portrait_KOR_yi_un
+				small = GFX_portrait_KOR_yi_un_civilian_small
+			}
+			army = {
+				small = GFX_portrait_KOR_yi_un_military_small
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			traits = { KOR_highness_yi_of_changdeokgung }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+
+	# Choe Hyon
+	KOR_choe_hyon = {
+		name = KOR_choe_hyon
+		portraits = {
+			civilian = {
+				large = GFX_portrait_Syngman_Rhee
+			}
+		}
+
+		corps_commander = {
+			traits = { trickster trait_mountaineer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			legacy_id = -1
+			visible = {
+				NOT = {
+					is_subject_of = JAP
+				}
+			}
+		}
+
+	}
+
+
+	# Hearts of Korea inherited character roster
 	KOR_Gu_Kim={ #Democratic Leader 2
 		name=KOR_gu_kim
 		portraits={
@@ -23,9 +161,7 @@ characters={
 			}
 		}
 	}
-	
-	#Changho Ahn Here : Democratic Leader 3
-	
+
 	KOR_Boseon_Yoon = { #Democratic Leader 4
 		name=KOR_boseon_yoon
 		portraits={
@@ -34,7 +170,7 @@ characters={
 			}
 		}
 	}
-	
+
 	KOR_Gang_Lee = { #Democratic Leader 5
 		name=KOR_gang_lee
 		portraits={
@@ -43,9 +179,7 @@ characters={
 			}
 		}
 	}
-	
-	#Woonhyung Yeo Here : Democratic Leader 6
-	
+
 	KOR_provisional_peoples_committee={ #Communist Leader 0
 		name=KOR_provisional_peoples_committee
 		portraits={
@@ -54,7 +188,7 @@ characters={
 			}
 		}
 	}
-	
+
 	KOR_Woonhyung_Yeo={ #Communist Leader 1
 		name=KOR_woonhyung_yeo
 		portraits={
@@ -63,7 +197,7 @@ characters={
 			}
 		}
 	}
-	
+
 	KOR_Heonyoung_Park={ #Communist Leader 2
 		name=KOR_heonyoung_park
 		portraits={
@@ -84,6 +218,7 @@ characters={
 				small="GFX_Portrait_KOR_Beomseok_Lee_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
 		corps_commander={
 			traits={ 
 			#뒷배경
@@ -156,7 +291,7 @@ characters={
 			logistics_skill=10
 		}
 	}
-	
+
 	KOR_Yeonsu_Gye={ #neutrality Leader 1
 		name=KOR_yeonsu_gye
 		portraits={
@@ -165,7 +300,7 @@ characters={
 			}
 		}
 	}
-	
+
 	KOR_Eun_Lee={ #neutrality Leader 2
 		name=KOR_eun_lee
 		portraits={
@@ -177,6 +312,7 @@ characters={
 				small="GFX_Portrait_KOR_Eun_Lee_general_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
 		field_marshal={
 			traits={ 
 			politically_connected 
@@ -254,10 +390,7 @@ characters={
 			}
 		}
 	}
-	
-# Navy & Airforce advisors
-	
-	
+
 	KOR_Wonil_Son={	#Navy Commander
 		name=KOR_wonil_son
 		portraits={
@@ -266,76 +399,72 @@ characters={
 				small="GFX_Portrait_KOR_Wonil_Son_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 조언가 특성과 연구 보너스 유지.
 		advisor={
 			slot = navy_chief
 			idea_token = wonil_son
 			allowed = {
 				original_tag = KOR
 			}
-#			traits = {
-#				navy_chief_decisive_battle_3
-#			}
-			
-			#kpop_modder_20240906
-			
 			traits = {
 				KOR_naval_3
 			}
-			
+			cost = 100
+
 			research_bonus = {
 				naval_equipment = 5.00
 			}
-			
-			cost = 100
 		}
 
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
+		# [2026-11-06]_kpopmodder: [RESTORATION] 해군 특성의 잘못된 표기와 통합된 기뢰 특성을 현행 ID로 연결.
 		navy_leader={
 			traits={ 
 			gentlemanly navy_media_personality superior_tactician 
 			superior_tactician #우수한 전술가
-				Bold
-				Naval_Lineage
-				Gentlemanly #신사
-				Battleship_Adherent #전함 지지자
-				Gunnery_Expert #포격 전문가
-				Aviation_Enthusiast #해군 항공술
-				Cuts_Corners
-				Chief_Engineer
-				Craven #비겁자
+				bold
+				naval_lineage
+				gentlemanly #신사
+				battleship_adherent #전함 지지자
+				gunnery_expert #포격 전문가
+				aviation_enthusiast #해군 항공술
+				cuts_corners
+				chief_engineer
+				craven #비겁자
 				
 				#제독 특성
-				Sea_Wolf #바다의 늑대
-				Blockade_Runner
-				Spotter #관측수
-				Fly_swatter #파리채
-				Ironside #철기병
-				Air_Controller #항공 관제사
-				Fleet_Protector #함대 보호가
-				Cold_Water_Expert
-				Inshore_Fighter #연안 싸움꾼
-				Blue_Water_Expert #대양 싸움꾼
-				Green_Water_Expert #연안해군 전문가
-				Silent_Hunter #조용한 사냥꾼
-				Torpedo_Expert #어뢰 전문가
-				Lancer #창기병
-				Loading_Drill_Master #재장전 훈련의 대가
-				Destroyer_Leader
-				Cruiser_Captain #순양함 지휘관
-				Search_Pattern_Expert
-				Lone_Wolf #고독한 늑대
-				Smoke_Screen_Specialist #연막차장 전문가
-				Concealment_Expert #은폐 전문가
-				Mine_Sweeper #기뢰 소해 전문가
-				Mine_Layer #기뢰 부설 전문가
-				Flight_Deck_Manager #비행갑판 관리관
-				Fighter_Director #전투기 지휘 전문가
-				Dive_Bomber #급강하 폭격 전문가
-				Torpedo_Bomber #뇌격 전문가
-				Big_Guns_Expert #거포 전문가
-				Marksman #명사수
-				Safety_First #안전 제일
-				Crisis_Magician #위기관리의 마술사
-				Ground_Pounder #지상 분쇄기
+				seawolf #바다의 늑대
+				blockade_runner
+				spotter #관측수
+				fly_swatter #파리채
+				ironside #철기병
+				air_controller #항공 관제사
+				fleet_protector #함대 보호가
+				arctic_water_expert
+				inshore_fighter #연안 싸움꾼
+				blue_water_expert #대양 싸움꾼
+				green_water_expert #연안해군 전문가
+				silent_hunter #조용한 사냥꾼
+				torpedo_expert #어뢰 전문가
+				lancer #창기병
+				loading_drill_master #재장전 훈련의 대가
+				destroyer_leader
+				cruiser_captain #순양함 지휘관
+				search_pattern_expert
+				lone_wolf #고독한 늑대
+				smoke_screen_expert #연막차장 전문가
+				concealment_expert #은폐 전문가
+				mine_craft #기뢰 소해 전문가
+				mine_craft #기뢰 부설 전문가
+				flight_deck_manager #비행갑판 관리관
+				fighter_director #전투기 지휘 전문가
+				dive_bomber #급강하 폭격 전문가
+				torpedo_bomber #뇌격 전문가
+				big_guns_expert #거포 전문가
+				marksman #명사수
+				safety_first #안전 제일
+				crisis_magician #위기관리의 마술사
+				ground_pounder #지상 분쇄기
 			}
 			skill=9
 			attack_skill=10
@@ -344,7 +473,7 @@ characters={
 			coordination_skill=10
 		}
 	}
-	
+
 	KOR_Seongmo_Shin={
 		name=KOR_seongmo_shin
 		portraits={
@@ -354,53 +483,55 @@ characters={
 			}
 		}
 			
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
+		# [2026-11-06]_kpopmodder: [RESTORATION] 해군 특성의 잘못된 표기와 통합된 기뢰 특성을 현행 ID로 연결.
 		navy_leader={
 			traits={ 
 			craven blockade_runner 
 			superior_tactician #우수한 전술가
-				Bold
-				Naval_Lineage
-				Gentlemanly #신사
-				Battleship_Adherent #전함 지지자
-				Gunnery_Expert #포격 전문가
-				Aviation_Enthusiast #해군 항공술
-				Cuts_Corners
-				Chief_Engineer
-				Craven #비겁자
+				bold
+				naval_lineage
+				gentlemanly #신사
+				battleship_adherent #전함 지지자
+				gunnery_expert #포격 전문가
+				aviation_enthusiast #해군 항공술
+				cuts_corners
+				chief_engineer
+				craven #비겁자
 				
 				#제독 특성
-				Sea_Wolf #바다의 늑대
-				Blockade_Runner
-				Spotter #관측수
-				Fly_swatter #파리채
-				Ironside #철기병
-				Air_Controller #항공 관제사
-				Fleet_Protector #함대 보호가
-				Cold_Water_Expert
-				Inshore_Fighter #연안 싸움꾼
-				Blue_Water_Expert #대양 싸움꾼
-				Green_Water_Expert #연안해군 전문가
-				Silent_Hunter #조용한 사냥꾼
-				Torpedo_Expert #어뢰 전문가
-				Lancer #창기병
-				Loading_Drill_Master #재장전 훈련의 대가
-				Destroyer_Leader
-				Cruiser_Captain #순양함 지휘관
-				Search_Pattern_Expert
-				Lone_Wolf #고독한 늑대
-				Smoke_Screen_Specialist #연막차장 전문가
-				Concealment_Expert #은폐 전문가
-				Mine_Sweeper #기뢰 소해 전문가
-				Mine_Layer #기뢰 부설 전문가
-				Flight_Deck_Manager #비행갑판 관리관
-				Fighter_Director #전투기 지휘 전문가
-				Dive_Bomber #급강하 폭격 전문가
-				Torpedo_Bomber #뇌격 전문가
-				Big_Guns_Expert #거포 전문가
-				Marksman #명사수
-				Safety_First #안전 제일
-				Crisis_Magician #위기관리의 마술사
-				Ground_Pounder #지상 분쇄기
+				seawolf #바다의 늑대
+				blockade_runner
+				spotter #관측수
+				fly_swatter #파리채
+				ironside #철기병
+				air_controller #항공 관제사
+				fleet_protector #함대 보호가
+				arctic_water_expert
+				inshore_fighter #연안 싸움꾼
+				blue_water_expert #대양 싸움꾼
+				green_water_expert #연안해군 전문가
+				silent_hunter #조용한 사냥꾼
+				torpedo_expert #어뢰 전문가
+				lancer #창기병
+				loading_drill_master #재장전 훈련의 대가
+				destroyer_leader
+				cruiser_captain #순양함 지휘관
+				search_pattern_expert
+				lone_wolf #고독한 늑대
+				smoke_screen_expert #연막차장 전문가
+				concealment_expert #은폐 전문가
+				mine_craft #기뢰 소해 전문가
+				mine_craft #기뢰 부설 전문가
+				flight_deck_manager #비행갑판 관리관
+				fighter_director #전투기 지휘 전문가
+				dive_bomber #급강하 폭격 전문가
+				torpedo_bomber #뇌격 전문가
+				big_guns_expert #거포 전문가
+				marksman #명사수
+				safety_first #안전 제일
+				crisis_magician #위기관리의 마술사
+				ground_pounder #지상 분쇄기
 			}
 			skill=9
 			attack_skill=10
@@ -409,7 +540,7 @@ characters={
 			coordination_skill=10
 		}
 	}
-	
+
 	KOR_Gyugap_Lee={
 		name=KOR_gyugap_lee
 		portraits={
@@ -418,6 +549,7 @@ characters={
 				small="GFX_Portrait_KOR_Gyugap_Lee_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 조언가 특성과 연구 보너스 유지.
 		advisor={
 			slot = navy_chief
 			idea_token = gyugap_lee
@@ -430,53 +562,55 @@ characters={
 			cost = 100
 		}
 			
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
+		# [2026-11-06]_kpopmodder: [RESTORATION] 해군 특성의 잘못된 표기와 통합된 기뢰 특성을 현행 ID로 연결.
 		navy_leader={
 			traits={ 
 			craven blockade_runner 
 			superior_tactician #우수한 전술가
-				Bold
-				Naval_Lineage
-				Gentlemanly #신사
-				Battleship_Adherent #전함 지지자
-				Gunnery_Expert #포격 전문가
-				Aviation_Enthusiast #해군 항공술
-				Cuts_Corners
-				Chief_Engineer
-				Craven #비겁자
+				bold
+				naval_lineage
+				gentlemanly #신사
+				battleship_adherent #전함 지지자
+				gunnery_expert #포격 전문가
+				aviation_enthusiast #해군 항공술
+				cuts_corners
+				chief_engineer
+				craven #비겁자
 				
 				#제독 특성
-				Sea_Wolf #바다의 늑대
-				Blockade_Runner
-				Spotter #관측수
-				Fly_swatter #파리채
-				Ironside #철기병
-				Air_Controller #항공 관제사
-				Fleet_Protector #함대 보호가
-				Cold_Water_Expert
-				Inshore_Fighter #연안 싸움꾼
-				Blue_Water_Expert #대양 싸움꾼
-				Green_Water_Expert #연안해군 전문가
-				Silent_Hunter #조용한 사냥꾼
-				Torpedo_Expert #어뢰 전문가
-				Lancer #창기병
-				Loading_Drill_Master #재장전 훈련의 대가
-				Destroyer_Leader
-				Cruiser_Captain #순양함 지휘관
-				Search_Pattern_Expert
-				Lone_Wolf #고독한 늑대
-				Smoke_Screen_Specialist #연막차장 전문가
-				Concealment_Expert #은폐 전문가
-				Mine_Sweeper #기뢰 소해 전문가
-				Mine_Layer #기뢰 부설 전문가
-				Flight_Deck_Manager #비행갑판 관리관
-				Fighter_Director #전투기 지휘 전문가
-				Dive_Bomber #급강하 폭격 전문가
-				Torpedo_Bomber #뇌격 전문가
-				Big_Guns_Expert #거포 전문가
-				Marksman #명사수
-				Safety_First #안전 제일
-				Crisis_Magician #위기관리의 마술사
-				Ground_Pounder #지상 분쇄기
+				seawolf #바다의 늑대
+				blockade_runner
+				spotter #관측수
+				fly_swatter #파리채
+				ironside #철기병
+				air_controller #항공 관제사
+				fleet_protector #함대 보호가
+				arctic_water_expert
+				inshore_fighter #연안 싸움꾼
+				blue_water_expert #대양 싸움꾼
+				green_water_expert #연안해군 전문가
+				silent_hunter #조용한 사냥꾼
+				torpedo_expert #어뢰 전문가
+				lancer #창기병
+				loading_drill_master #재장전 훈련의 대가
+				destroyer_leader
+				cruiser_captain #순양함 지휘관
+				search_pattern_expert
+				lone_wolf #고독한 늑대
+				smoke_screen_expert #연막차장 전문가
+				concealment_expert #은폐 전문가
+				mine_craft #기뢰 소해 전문가
+				mine_craft #기뢰 부설 전문가
+				flight_deck_manager #비행갑판 관리관
+				fighter_director #전투기 지휘 전문가
+				dive_bomber #급강하 폭격 전문가
+				torpedo_bomber #뇌격 전문가
+				big_guns_expert #거포 전문가
+				marksman #명사수
+				safety_first #안전 제일
+				crisis_magician #위기관리의 마술사
+				ground_pounder #지상 분쇄기
 			}
 			skill=9
 			attack_skill=10
@@ -485,7 +619,7 @@ characters={
 			coordination_skill=10
 		}
 	}
-	
+
 	KOR_Seonghak_Choi={
 		name=KOR_seonghak_choi
 		portraits={
@@ -495,53 +629,55 @@ characters={
 			}
 		}
 			
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
+		# [2026-11-06]_kpopmodder: [RESTORATION] 해군 특성의 잘못된 표기와 통합된 기뢰 특성을 현행 ID로 연결.
 		navy_leader={
 			traits={ 
 			craven blockade_runner 
 			superior_tactician #우수한 전술가
-				Bold
-				Naval_Lineage
-				Gentlemanly #신사
-				Battleship_Adherent #전함 지지자
-				Gunnery_Expert #포격 전문가
-				Aviation_Enthusiast #해군 항공술
-				Cuts_Corners
-				Chief_Engineer
-				Craven #비겁자
+				bold
+				naval_lineage
+				gentlemanly #신사
+				battleship_adherent #전함 지지자
+				gunnery_expert #포격 전문가
+				aviation_enthusiast #해군 항공술
+				cuts_corners
+				chief_engineer
+				craven #비겁자
 				
 				#제독 특성
-				Sea_Wolf #바다의 늑대
-				Blockade_Runner
-				Spotter #관측수
-				Fly_swatter #파리채
-				Ironside #철기병
-				Air_Controller #항공 관제사
-				Fleet_Protector #함대 보호가
-				Cold_Water_Expert
-				Inshore_Fighter #연안 싸움꾼
-				Blue_Water_Expert #대양 싸움꾼
-				Green_Water_Expert #연안해군 전문가
-				Silent_Hunter #조용한 사냥꾼
-				Torpedo_Expert #어뢰 전문가
-				Lancer #창기병
-				Loading_Drill_Master #재장전 훈련의 대가
-				Destroyer_Leader
-				Cruiser_Captain #순양함 지휘관
-				Search_Pattern_Expert
-				Lone_Wolf #고독한 늑대
-				Smoke_Screen_Specialist #연막차장 전문가
-				Concealment_Expert #은폐 전문가
-				Mine_Sweeper #기뢰 소해 전문가
-				Mine_Layer #기뢰 부설 전문가
-				Flight_Deck_Manager #비행갑판 관리관
-				Fighter_Director #전투기 지휘 전문가
-				Dive_Bomber #급강하 폭격 전문가
-				Torpedo_Bomber #뇌격 전문가
-				Big_Guns_Expert #거포 전문가
-				Marksman #명사수
-				Safety_First #안전 제일
-				Crisis_Magician #위기관리의 마술사
-				Ground_Pounder #지상 분쇄기
+				seawolf #바다의 늑대
+				blockade_runner
+				spotter #관측수
+				fly_swatter #파리채
+				ironside #철기병
+				air_controller #항공 관제사
+				fleet_protector #함대 보호가
+				arctic_water_expert
+				inshore_fighter #연안 싸움꾼
+				blue_water_expert #대양 싸움꾼
+				green_water_expert #연안해군 전문가
+				silent_hunter #조용한 사냥꾼
+				torpedo_expert #어뢰 전문가
+				lancer #창기병
+				loading_drill_master #재장전 훈련의 대가
+				destroyer_leader
+				cruiser_captain #순양함 지휘관
+				search_pattern_expert
+				lone_wolf #고독한 늑대
+				smoke_screen_expert #연막차장 전문가
+				concealment_expert #은폐 전문가
+				mine_craft #기뢰 소해 전문가
+				mine_craft #기뢰 부설 전문가
+				flight_deck_manager #비행갑판 관리관
+				fighter_director #전투기 지휘 전문가
+				dive_bomber #급강하 폭격 전문가
+				torpedo_bomber #뇌격 전문가
+				big_guns_expert #거포 전문가
+				marksman #명사수
+				safety_first #안전 제일
+				crisis_magician #위기관리의 마술사
+				ground_pounder #지상 분쇄기
 			}
 			skill=9
 			attack_skill=10
@@ -550,7 +686,6 @@ characters={
 			coordination_skill=10
 		}
 	}
-	
 
 	KOR_Geungmo_Jeong={
 		name=KOR_geungmo_jeong
@@ -559,6 +694,19 @@ characters={
 				small="GFX_Portrait_Korea_Generic_navy_2_small"
 			}
 		}
+		#advisor={
+		#	slot = navy_chief
+		#	idea_token = geungmo_jeong
+		#	allowed = {
+		#		original_tag = KOR
+		#	}
+		#	traits = {
+		#
+		#	}
+		#	cost = 100
+		#}
+
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 정긍모 국뽕 해군 조언가와 연구 보너스 유지.
 		advisor={
 			slot = navy_chief
 			idea_token = geungmo_jeong
@@ -582,7 +730,7 @@ characters={
 			cost = 100
 		}
 	}
-	
+
 	KOR_Yongdeuck_Choi={
 		name=KOR_yongdeuck_choi
 		portraits={
@@ -590,31 +738,24 @@ characters={
 				small="GFX_Portrait_KOR_Yongdeuck_Choi_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 조언가 특성과 연구 보너스 유지.
 		advisor={
 			slot = air_chief
 			idea_token = yongdeuck_choi
 			allowed = {
 				original_tag = KOR
 			}
-#			traits = {
-#				air_chief_ground_support_3
-#			}
-
-
-			#kpop_modder_20240906
-			
 			traits = {
 				KOR_aircraft_3
 			}
-			
+			cost = 100
+
 			research_bonus = {
 				air_equipment = 5.00
 			}
-
-			cost = 100
 		}
 	}
-	
+
 	KOR_Jeongryeol_Kim={
 		name=KOR_jeongryeol_kim
 		portraits={
@@ -622,30 +763,24 @@ characters={
 				small="GFX_Portrait_KOR_Jeongryeol_Kim_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 조언가 특성과 연구 보너스 유지.
 		advisor={
 			slot = air_chief
 			idea_token = jeongryeol_kim
 			allowed = {
 				original_tag = KOR
 			}
-#			traits = {
-#				air_chief_all_weather_2
-#			}
-			
-			#kpop_modder_20240906
-			
 			traits = {
 				KOR_aircraft_3
 			}
-			
+			cost = 100
+
 			research_bonus = {
 				air_equipment = 5.00
 			}
-			
-			cost = 100
 		}
 	}
-	
+
 	KOR_Seongho_Lee={
 		name=KOR_seongho_lee
 		portraits={
@@ -653,6 +788,7 @@ characters={
 				small="GFX_Portrait_Korea_Generic_navy_1_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 조언가 특성과 연구 보너스 유지.
 		advisor={
 			slot = high_command
 			idea_token = seongho_lee
@@ -666,7 +802,7 @@ characters={
 			cost = 50
 		}
 	}
-	
+
 	KOR_Giok_Gwon={
 		name=KOR_giok_gwon
 		portraits={
@@ -675,6 +811,7 @@ characters={
 				small="GFX_Portrait_KOR_Giok_Gwon_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 조언가 특성과 연구 보너스 유지.
 		advisor={
 			slot = high_command
 			idea_token = giok_gwon
@@ -688,7 +825,7 @@ characters={
 			cost = 100
 		}
 	}
-		
+
 	KOR_Changnam_Ahn={
 		name=KOR_changnam_ahn
 		portraits={
@@ -696,6 +833,7 @@ characters={
 				small="GFX_Portrait_KOR_Changnam_Ahn_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 조언가 특성과 연구 보너스 유지.
 		advisor={
 			slot = high_command
 			idea_token = changnam_ahn
@@ -709,10 +847,7 @@ characters={
 			cost = 50
 		}
 	}
-	
-	
-	#Theorist
-	
+
 	KOR_Okgyu_Park={
 		name=KOR_okgyu_park
 		portraits={
@@ -733,7 +868,7 @@ characters={
 			}
 		}
 	}
-	
+
 	KOR_Sin_Kim={
 		name=KOR_sin_kim
 		portraits={
@@ -754,6 +889,7 @@ characters={
 			}
 		}
 	}
+
 	KOR_Taeyeong_Shin={
 		name=KOR_taeyeong_shin
 		portraits={
@@ -774,9 +910,7 @@ characters={
 			}
 		}
 	}
-	
-	#Political Advisor
-	
+
 	KOR_Dubong_Kim={
 		name=KOR_dubong_kim
 		portraits={
@@ -796,6 +930,7 @@ characters={
 			}
 		}
 	}
+
 	KOR_Changho_Ahn={
 		name=KOR_changho_ahn
 		portraits={
@@ -821,6 +956,7 @@ characters={
 			}
 		}
 	}
+
 	KOR_Hosang_Ahn={
 		name=KOR_hosang_ahn
 		portraits={
@@ -840,6 +976,7 @@ characters={
 			}
 		}
 	}
+
 	KOR_Urihwangsilsaranghoe_idea={
 		name=KOR_urihwangsilsaranghoe_idea
 		portraits={
@@ -862,11 +999,7 @@ characters={
 			}
 		}
 	}
-	
-	
-	
-	#others
-	
+
 	KOR_Ilhan_Yu={
 		name=KOR_ilhan_yu
 		portraits={
@@ -882,10 +1015,12 @@ characters={
 			}
 			available = { has_completed_focus = KOR_eight_province_development_committee }
 			traits  = {
-				KOR_economist
+				#20261101_kpopmodder: Replace the production-efficiency trait with vanilla consumer-goods reduction.
+				financial_expert
 			}
 		}
 	}
+
 	KOR_Doyeon_Kim={
 		name=KOR_doyeon_kim
 		portraits={
@@ -904,6 +1039,7 @@ characters={
 			}
 		}
 	}
+
 	KOR_Seungjik_Park={
 		name=KOR_seungjik_park
 		portraits={
@@ -922,6 +1058,7 @@ characters={
 			}
 		}
 	}
+
 	KOR_Dongjin_Yeom={
 		name=KOR_dongjin_yeom
 		portraits={
@@ -944,6 +1081,7 @@ characters={
 			}
 		}		
 	}
+
 	KOR_Giboong_Lee={
 		name=KOR_giboong_lee
 		portraits={
@@ -965,6 +1103,7 @@ characters={
 			}
 		}		
 	}
+
 	KOR_Gwansun_Yoo={
 		name=KOR_gwansun_yoo
 		portraits={
@@ -986,6 +1125,7 @@ characters={
 			}
 		}
 	}
+
 	KOR_Jeonghwan_Bang={
 		name=KOR_jeonghwan_bang
 		portraits={
@@ -1007,6 +1147,7 @@ characters={
 			}
 		}
 	}
+
 	KOR_Mansik_Jo={
 		name=KOR_mansik_jo
 		portraits={
@@ -1028,6 +1169,7 @@ characters={
 			}
 		}
 	}
+
 	KOR_Jaehong_Ahn={
 		name=KOR_jaehong_ahn
 		portraits={
@@ -1049,6 +1191,7 @@ characters={
 			}
 		}
 	}
+
 	KOR_Jinwoo_Song={
 		name=KOR_jinwoo_song
 		portraits={
@@ -1067,6 +1210,7 @@ characters={
 			}
 		}
 	}
+
 	KOR_Namseon_Choi={
 		name=KOR_namseon_choi
 		portraits={
@@ -1085,9 +1229,7 @@ characters={
 			}
 		}
 	}
-	
-	
-	#Focus
+
 	KOR_Gongsu_Kim={
 		name=KOR_gongsu_kim
 		portraits={
@@ -1096,6 +1238,7 @@ characters={
 				small="GFX_Portrait_KOR_Gongsu_Kim_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 조언가 특성과 연구 보너스 유지.
 		advisor={
 			slot = high_command
 			idea_token = gongsu_kim
@@ -1111,6 +1254,7 @@ characters={
 				factor = 1.000
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
 		corps_commander={
 			traits = { 
 			commando paratrooper
@@ -1189,6 +1333,7 @@ characters={
 		}
 		
 	}
+
 	KOR_Geunchul_Hwang={
 		name=KOR_geunchul_hwang
 		portraits={
@@ -1197,6 +1342,7 @@ characters={
 				small="GFX_Portrait_KOR_Geunchul_Hwang_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 조언가 특성과 연구 보너스 유지.
 		advisor={
 			slot = high_command
 			idea_token = geunchul_hwang
@@ -1212,6 +1358,7 @@ characters={
 				factor = 1.000
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
 		corps_commander={
 			traits = { 
 			naval_invader 
@@ -1289,6 +1436,7 @@ characters={
 			}
 		}
 	}
+
 	KOR_Jamsoo_Park={
 		name=KOR_jamsoo_park
 		portraits = {
@@ -1297,54 +1445,56 @@ characters={
 				small="GFX_Portrait_Korea_Generic_navy_1_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
+		# [2026-11-06]_kpopmodder: [RESTORATION] 해군 특성의 잘못된 표기와 통합된 기뢰 특성을 현행 ID로 연결.
 		navy_leader={
 			traits={ 
 			navy_career_officer seawolf 
 			navy_media_personality 
 				superior_tactician #우수한 전술가
-				Bold
-				Naval_Lineage
-				Gentlemanly #신사
-				Battleship_Adherent #전함 지지자
-				Gunnery_Expert #포격 전문가
-				Aviation_Enthusiast #해군 항공술
-				Cuts_Corners
-				Chief_Engineer
-				Craven #비겁자
+				bold
+				naval_lineage
+				gentlemanly #신사
+				battleship_adherent #전함 지지자
+				gunnery_expert #포격 전문가
+				aviation_enthusiast #해군 항공술
+				cuts_corners
+				chief_engineer
+				craven #비겁자
 				
 				#제독 특성
-				Sea_Wolf #바다의 늑대
-				Blockade_Runner
-				Spotter #관측수
-				Fly_swatter #파리채
-				Ironside #철기병
-				Air_Controller #항공 관제사
-				Fleet_Protector #함대 보호가
-				Cold_Water_Expert
-				Inshore_Fighter #연안 싸움꾼
-				Blue_Water_Expert #대양 싸움꾼
-				Green_Water_Expert #연안해군 전문가
-				Silent_Hunter #조용한 사냥꾼
-				Torpedo_Expert #어뢰 전문가
-				Lancer #창기병
-				Loading_Drill_Master #재장전 훈련의 대가
-				Destroyer_Leader
-				Cruiser_Captain #순양함 지휘관
-				Search_Pattern_Expert
-				Lone_Wolf #고독한 늑대
-				Smoke_Screen_Specialist #연막차장 전문가
-				Concealment_Expert #은폐 전문가
-				Mine_Sweeper #기뢰 소해 전문가
-				Mine_Layer #기뢰 부설 전문가
-				Flight_Deck_Manager #비행갑판 관리관
-				Fighter_Director #전투기 지휘 전문가
-				Dive_Bomber #급강하 폭격 전문가
-				Torpedo_Bomber #뇌격 전문가
-				Big_Guns_Expert #거포 전문가
-				Marksman #명사수
-				Safety_First #안전 제일
-				Crisis_Magician #위기관리의 마술사
-				Ground_Pounder #지상 분쇄기
+				seawolf #바다의 늑대
+				blockade_runner
+				spotter #관측수
+				fly_swatter #파리채
+				ironside #철기병
+				air_controller #항공 관제사
+				fleet_protector #함대 보호가
+				arctic_water_expert
+				inshore_fighter #연안 싸움꾼
+				blue_water_expert #대양 싸움꾼
+				green_water_expert #연안해군 전문가
+				silent_hunter #조용한 사냥꾼
+				torpedo_expert #어뢰 전문가
+				lancer #창기병
+				loading_drill_master #재장전 훈련의 대가
+				destroyer_leader
+				cruiser_captain #순양함 지휘관
+				search_pattern_expert
+				lone_wolf #고독한 늑대
+				smoke_screen_expert #연막차장 전문가
+				concealment_expert #은폐 전문가
+				mine_craft #기뢰 소해 전문가
+				mine_craft #기뢰 부설 전문가
+				flight_deck_manager #비행갑판 관리관
+				fighter_director #전투기 지휘 전문가
+				dive_bomber #급강하 폭격 전문가
+				torpedo_bomber #뇌격 전문가
+				big_guns_expert #거포 전문가
+				marksman #명사수
+				safety_first #안전 제일
+				crisis_magician #위기관리의 마술사
+				ground_pounder #지상 분쇄기
 			}
 			skill=9
 			attack_skill=10
@@ -1357,11 +1507,7 @@ characters={
 			}
 		}
 	}
-	
-	
-	
-	#army generals
-	
+
 	KOR_Cheongcheon_Ji={
 		name=KOR_cheongcheon_ji
 		portraits={
@@ -1370,28 +1516,23 @@ characters={
 				small="GFX_Portrait_KOR_Cheongcheon_Ji_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 조언가 특성과 연구 보너스 유지.
 		advisor={
 			slot = army_chief
 			idea_token = cheongcheon_ji
 			allowed = {
 				original_tag = KOR
 			}
-#			traits = {
-#				army_chief_offensive_3
-#			}
-			
-			#kpop_modder_20240906
-			
-			research_bonus = {
-				armor = 5.00
-			}
-			
 			traits = {
 				KOR_tank_3
 			}
-			
 			cost = 100
+
+			research_bonus = {
+				armor = 5.00
+			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
 		field_marshal={
 			traits={ 
 			offensive_doctrine trait_cautious 
@@ -1465,7 +1606,7 @@ characters={
 			logistics_skill=10
 		}
 	}
-	
+
 	KOR_Dongyeol_Yoo={
 		name=KOR_dongyeol_yoo
 		portraits={
@@ -1474,28 +1615,23 @@ characters={
 				small="GFX_Portrait_KOR_Dongyeol_Yoo_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 조언가 특성과 연구 보너스 유지.
 		advisor={
 			slot = army_chief
 			idea_token = dongyeol_yoo
 			allowed = {
 				original_tag = KOR
 			}
-#			traits = {
-#				army_chief_defensive_2
-#			}
-			
-			#kpop_modder_20240906
-			
-			research_bonus = {
-				armor = 5.00
-			}
-			
 			traits = {
 				KOR_tank_3
 			}
-			
 			cost = 100
+
+			research_bonus = {
+				armor = 5.00
+			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
 		field_marshal={
 			traits={ 
 			old_guard defensive_doctrine 
@@ -1569,7 +1705,7 @@ characters={
 			logistics_skill=10
 		}
 	}
-	
+
 	KOR_Gyungcheon_Kim={
 		name=KOR_gyungcheon_kim
 		portraits={
@@ -1578,6 +1714,7 @@ characters={
 				small="GFX_Portrait_KOR_Gyungcheon_Kim_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
 		corps_commander={
 			traits={ 
 			cavalry_officer brilliant_strategist trickster 
@@ -1651,9 +1788,7 @@ characters={
 			logistics_skill=10
 		}
 	}
-	
-	#Beonseok_Lee Here
-	
+
 	KOR_Hongil_Kim={
 		name=KOR_hongil_kim
 		portraits={
@@ -1662,6 +1797,7 @@ characters={
 				small="GFX_Portrait_KOR_Hongil_Kim_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 조언가 특성과 연구 보너스 유지.
 		advisor={
 			slot = high_command
 			idea_token = hongil_kim
@@ -1674,6 +1810,7 @@ characters={
 			}
 			cost = 100
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
 		corps_commander={
 			traits={ 
 			infantry_officer inflexible_strategist career_officer 
@@ -1747,7 +1884,7 @@ characters={
 			logistics_skill=10
 		}
 	}
-	
+
 	KOR_Saik_Hong={
 		name=KOR_saik_hong
 		portraits={
@@ -1756,6 +1893,7 @@ characters={
 				small="GFX_Portrait_KOR_Saik_Hong_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
 		corps_commander={
 			traits={ 
 			infantry_leader trickster 
@@ -1829,7 +1967,7 @@ characters={
 			logistics_skill=10
 		}
 	}
-	
+
 	KOR_Seokwon_Kim={
 		name=KOR_seokwon_kim
 		portraits={
@@ -1838,6 +1976,7 @@ characters={
 				small="GFX_Portrait_KOR_Seokwon_Kim_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 조언가 특성과 연구 보너스 유지.
 		advisor={
 			slot = high_command
 			idea_token = seokwon_kim
@@ -1850,6 +1989,7 @@ characters={
 			}
 			cost = 100
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
 		corps_commander={
 			traits={ 
 			infantry_officer ranger 
@@ -1923,7 +2063,7 @@ characters={
 			logistics_skill=10
 		}
 	}
-	
+
 	KOR_Eungjun_Lee={
 		name=KOR_eungjun_lee
 		portraits={
@@ -1932,6 +2072,7 @@ characters={
 				small="GFX_Portrait_KOR_Eungjun_Lee_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 조언가 특성과 연구 보너스 유지.
 		advisor={
 			slot = high_command
 			idea_token = eungjun_lee
@@ -1944,6 +2085,7 @@ characters={
 			}
 			cost = 100
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
 		corps_commander={
 			traits={ 
 			career_officer infantry_officer organizer 
@@ -2017,6 +2159,7 @@ characters={
 			logistics_skill=10
 		}
 	}
+
 	KOR_Gwangseon_Oh={
 		name=KOR_gwangseon_oh
 		portraits={
@@ -2025,6 +2168,7 @@ characters={
 				small="GFX_Portrait_KOR_Gwangseon_Oh_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
 		corps_commander={
 			traits={ 
 			#뒷배경
@@ -2097,6 +2241,7 @@ characters={
 			logistics_skill=10
 		}
 	}
+
 	KOR_Hakgyu_Kim={
 		name=KOR_hakgyu_kim
 		portraits={
@@ -2105,6 +2250,7 @@ characters={
 				small="GFX_Portrait_KOR_Hakgyu_Kim_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
 		corps_commander={
 			traits={ 
 			trickster 
@@ -2178,6 +2324,7 @@ characters={
 			logistics_skill=10
 		}
 	}
+
 	KOR_Hoseong_Song={
 		name=KOR_hoseong_song
 		portraits={
@@ -2186,6 +2333,7 @@ characters={
 				small="GFX_Portrait_KOR_Hoseong_Song_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
 		corps_commander={
 			traits={ 
 			trait_cautious 
@@ -2259,6 +2407,7 @@ characters={
 			logistics_skill=10
 		}
 	}
+
 	KOR_Jun_Gwon={
 		name=KOR_jun_gwan
 		portraits={
@@ -2267,6 +2416,7 @@ characters={
 				small="GFX_Portrait_KOR_Jun_Gwon_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
 		corps_commander={
 			traits={ 
 			#뒷배경
@@ -2339,6 +2489,7 @@ characters={
 			logistics_skill=10
 		}
 	}
+
 	KOR_Junsik_Lee={
 		name=KOR_junsik_lee
 		portraits={
@@ -2347,6 +2498,7 @@ characters={
 				small="GFX_Portrait_KOR_Junsik_Lee_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
 		corps_commander={
 			traits={ 
 			inflexible_strategist
@@ -2420,6 +2572,7 @@ characters={
 			logistics_skill=10
 		}
 	}
+
 	KOR_Sichang_Park={
 		name=KOR_sichang_park
 		portraits={
@@ -2428,6 +2581,7 @@ characters={
 				small="GFX_Portrait_KOR_Sichang_Park_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 조언가 특성과 연구 보너스 유지.
 		advisor={
 			slot = high_command
 			idea_token = sichang_park
@@ -2440,6 +2594,7 @@ characters={
 			}
 			cost = 50
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
 		corps_commander={
 			traits={ 
 			HoK_artillery_officer 
@@ -2513,9 +2668,7 @@ characters={
 			logistics_skill=10
 		}
 	}
-	
-	
-	#Commie military leaders
+
 	KOR_Wonbong_Kim={
 		name=KOR_wonbong_kim
 		portraits={
@@ -2524,25 +2677,24 @@ characters={
 				small="GFX_Portrait_KOR_Wonbong_Kim_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 조언가 특성과 연구 보너스 유지.
 		advisor={
 			slot = army_chief
 			idea_token = wonbong_kim
 			allowed = {
 				has_completed_focus = KOR_formation_of_the_provisional_peoples_committee
 			}
-			
-			#20250609_kpopmodder
-			
-			research_bonus = {
-				armor = 5.00
-			}
-			
 			traits = {
 				KOR_tank_3#20250609_kpopmodder
 			}
 			cost = 100
+
+			research_bonus = {
+				armor = 5.00
+			}
 		}
 	}
+
 	KOR_Il_Nam={
 		name=KOR_il_nam
 		portraits={
@@ -2563,6 +2715,7 @@ characters={
 			}
 			cost = 100
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
 		corps_commander={
 			traits = { 
 			infantry_officer 
@@ -2640,6 +2793,7 @@ characters={
 			}
 		}
 	}
+
 	KOR_Yonggeon_Choe={
 		name=KOR_yonggeon_choe
 		portraits={
@@ -2648,6 +2802,7 @@ characters={
 				small="GFX_Portrait_Korea_Generic_land_2_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
 		corps_commander={
 			traits = { 
 			infantry_officer politically_connected 
@@ -2725,6 +2880,7 @@ characters={
 			}
 		}
 	}
+
 	KOR_Chaek_Kim={
 		name=KOR_chaek_kim
 		portraits={
@@ -2733,6 +2889,7 @@ characters={
 				small="GFX_Portrait_Korea_Generic_land_1_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
 		corps_commander={
 			traits = { 
 			infantry_officer trait_cautious 
@@ -2810,6 +2967,7 @@ characters={
 			}
 		}
 	}
+
 	KOR_Gyeongsu_Ryu={
 		name=KOR_gyeongsu_ryu
 		portraits={
@@ -2830,6 +2988,7 @@ characters={
 			}
 			cost = 150
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
 		corps_commander={
 			traits = { 
 			armor_officer brilliant_strategist politically_connected 
@@ -2907,10 +3066,7 @@ characters={
 			}
 		}
 	}
-	
-	
-	#Gookppong Generals - become military leader when gookppong_on_actions only.
-	
+
 	KOR_Beomdo_Hong = {
 		name=KOR_beomdo_hong
 		portraits={
@@ -2932,6 +3088,7 @@ characters={
 				KOR_minister_of_defense
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
 		field_marshal={
 			traits={ 
 			inflexible_strategist trait_cautious war_hero trickster defensive_doctrine 
@@ -3009,6 +3166,7 @@ characters={
 			}
 		}
 	}
+
 	KOR_Jwajin_Kim = {
 		name=KOR_jwajin_kim
 		portraits={
@@ -3017,6 +3175,7 @@ characters={
 				small="GFX_Portrait_KOR_Jwajin_Kim_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
 		corps_commander={
 			traits={ 
 			infantry_officer ranger commando jaeger 
@@ -3094,6 +3253,7 @@ characters={
 			}
 		}
 	}
+
 	KOR_Junggeun_Ahn = {
 		name=KOR_junggeun_ahn
 		portraits={
@@ -3102,6 +3262,7 @@ characters={
 				small="GFX_Portrait_KOR_Junggeun_Ahn_small"
 			}
 		}
+		# [2026-11-06]_kpopmodder: [REBALANCE] 기존 국뽕 지휘관 특성과 능력치를 최신 인물 정의에 유지.
 		corps_commander={
 			traits={ 
 			brilliant_strategist career_officer trickster jaeger 
@@ -3179,8 +3340,7 @@ characters={
 			}
 		}
 	}
-	
-	#Scientists
+
 	KOR_Bugil_Hwang = {
 		name=KOR_bugil_hwang
 		portraits={
@@ -3193,6 +3353,7 @@ characters={
 			skills = { specialization_naval = 1 }
 		}
 	}
+
 	KOR_Gyeongyeon_Jo = {
 		name=KOR_gyeongyeon_jo
 		portraits={
@@ -3205,6 +3366,7 @@ characters={
 			skills = { specialization_air = 1 }
 		}
 	}
+
 	KOR_Sanglok_Do = {
 		name=KOR_sanglok_do
 		portraits={
@@ -3217,6 +3379,7 @@ characters={
 			skills = { specialization_nuclear = 2 }
 		}
 	}
+
 	KOR_Yonggwan_Kim = {
 		name=KOR_yonggwan_kim
 		portraits={

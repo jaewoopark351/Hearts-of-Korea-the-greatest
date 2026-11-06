@@ -279,7 +279,9 @@ ideas = {
 			picture = kor_vision_1950
 			
 			modifier = {
-				industrial_capacity_dockyard = 0.2
+				# [2026-11-06]_kpopmodder: [IMPORT] 최신 원본의 비전 1950 조선소 생산 +30% 반영.
+				#20261020_kpopmodder: Increase Vision 1950 dockyard output from 20 to 30 percent as requested.
+				industrial_capacity_dockyard = 0.3
 			}
 		}
 		
@@ -521,7 +523,11 @@ ideas = {
 				generate_wargoal_tension = -1.00
 				join_faction_tension = -0.50
 				lend_lease_tension = -1.00
-				send_volunteers_tension = -0.25
+				# [2026-11-06]_kpopmodder: [IMPORT] 최신 원본의 의용군 긴장도 완화와 추가 5사단 반영.
+				#20260921_kpopmodder: Remove the democratic volunteer tension requirement.
+				send_volunteers_tension = -0.50
+				#20260921_kpopmodder: Add five volunteer divisions to the existing diplomatic permission and tension effects.
+				send_volunteer_size = 5
 			}			
 			removal_cost = -1	
 		}

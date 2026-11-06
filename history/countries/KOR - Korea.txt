@@ -1,7 +1,10 @@
-﻿capital = 1017	
+﻿# [2026-11-06]_kpopmodder: [RESTORATION] 최신 원본 지도에 맞는 수도 참조 복원.
+capital = 525
 
 ##Korean start setup###
 
+# [2026-11-06]_kpopmodder: [RESTORATION] 원본 시작 슬롯을 복원하고 다음 날 국뽕 슬롯 6개 지급 유지.
+set_research_slots = 2
 country_event = { id = HoK_Greatest.0 days = 1 }#20250608_kpopmodder
 
 if = {
@@ -50,7 +53,8 @@ if = {
 if = {
 	limit = { has_dlc = "Man the Guns" }
 		set_naval_oob = "KOR_1936_naval_mtg"
-		set_war_support = 0.05
+		# [2026-11-06]_kpopmodder: [IMPORT] 최신 원본의 MtG 시작 전쟁 지지도 10% 반영.
+		set_war_support = 0.1#20260922_kpopmodder
 	else = {
 		set_naval_oob = "KOR_1936_naval_legacy"
 		set_war_support = 0.1
@@ -79,11 +83,13 @@ set_technology = {
 	tech_trucks = 1
 	fuel_silos = 1
 	
-	#doctrines#
-	superior_firepower = 1
-	trade_interdiction = 1
-	formation_flying = 1
 }
+
+# [2026-11-06]_kpopmodder: [RESTORATION] 최신 원본의 현행 육해공 대교리 초기화 반영.
+#20261031_kpopmodder: Preserve the original three service doctrines in the target-version doctrine system.
+set_grand_doctrine = superior_firepower
+set_grand_doctrine = new_convoy_raiding
+set_grand_doctrine = new_battlefield_support
 
 if = {
 	limit = { has_dlc = "No Step Back" }
@@ -154,7 +160,8 @@ if = {
 ##Korean leaders ###
 
 ##Political leader
-recruit_character = KOR_Syngman_Rhee						#Democratic Leader 1
+# [2026-11-06]_kpopmodder: [RESTORATION] 최신 원본의 이승만 인물 ID와 모집 참조 일치.
+recruit_character = KOR_syngman_rhee						#Democratic Leader 1
 recruit_character = KOR_Gu_Kim								#Democratic Leader 2
 recruit_character = KOR_Boseon_Yoon
 recruit_character = KOR_Gang_Lee
