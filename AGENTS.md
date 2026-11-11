@@ -356,6 +356,11 @@ For `descriptor.mod` and launcher `.mod` files:
 
 - Changing `supported_version` is not a compatibility fix.
 - Preserve dependencies unless migration is explicitly requested.
+- The current overlay must support both Hearts of Korea base editions. Keep both exact names in the `descriptor.mod` `dependencies` block.
+  - `하츠 오브 코리아 Hearts of Korea[1.19 호환](씹덕 모드 제작자 개정)`
+  - `하츠 오브 코리아 Hearts of Korea[Road to 56 호환]`
+- The 1.19 restoration in `422eb2a` narrowed the dependency list to the standard 1.19 edition and dropped the Road to 56 entry, putting that playset at risk. `9ca333c` restored the entry.
+- When validating changes to the overlay descriptor or its dependencies, check each base edition in its own launcher playset and record the loaded base and load order.
 - Audit every `replace_path`; it can unload broad vanilla databases and cause distant failures.
 - Never add `replace_path` merely to hide duplicate or stale content.
 - Treat original Workshop ID `2898629778` as provenance only; a successor release must never inherit or target its `remote_file_id`.
