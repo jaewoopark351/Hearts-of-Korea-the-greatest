@@ -3161,8 +3161,15 @@ characters = {
 			planning_skill = 10
 			logistics_skill = 10
 			
+			# [2026-11-14]_kpopmodder: [RESTORATION] Sync focus unlock and preserve legacy gook commanders.
 			visible = { 
-				has_global_flag = kor_hok_gookppong_enabled_flag 
+				OR = {
+					has_completed_focus = KOR_prepare_for_the_next_war
+					AND = {
+						has_global_flag = kor_hok_gookppong_enabled_flag
+						NOT = { has_country_flag = HOK_KOR_commander_focus_unlock_v1 }
+					}
+				}
 			}
 		}
 	}
@@ -3248,8 +3255,15 @@ characters = {
 			planning_skill = 10
 			logistics_skill = 10
 			
+			# [2026-11-14]_kpopmodder: [RESTORATION] Sync focus unlock and preserve legacy gook commanders.
 			visible = { 
-				has_global_flag = kor_hok_gookppong_enabled_flag 
+				OR = {
+					has_completed_focus = KOR_prepare_for_the_next_war
+					AND = {
+						has_global_flag = kor_hok_gookppong_enabled_flag
+						NOT = { has_country_flag = HOK_KOR_commander_focus_unlock_v1 }
+					}
+				}
 			}
 		}
 	}
@@ -3335,8 +3349,15 @@ characters = {
 			planning_skill = 10
 			logistics_skill = 10
 			
+			# [2026-11-14]_kpopmodder: [RESTORATION] Sync focus unlock and preserve legacy gook commanders.
 			visible = { 
-				has_global_flag = kor_hok_gookppong_enabled_flag 
+				OR = {
+					has_completed_focus = KOR_prepare_for_the_next_war
+					AND = {
+						has_global_flag = kor_hok_gookppong_enabled_flag
+						NOT = { has_country_flag = HOK_KOR_commander_focus_unlock_v1 }
+					}
+				}
 			}
 		}
 	}

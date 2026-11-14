@@ -1,6 +1,12 @@
 ﻿# [2026-11-06]_kpopmodder: [RESTORATION] 최신 원본 지도에 맞는 수도 참조 복원.
 capital = 525
 
+# [2026-11-14]_kpopmodder: [RESTORATION] Sync the new-game state development version flag.
+set_country_flag = HOK_KOR_cndp_state_projects_v1
+
+# [2026-11-14]_kpopmodder: [RESTORATION] Distinguish focus-gated new games from legacy saves.
+set_country_flag = HOK_KOR_commander_focus_unlock_v1
+
 ##Korean start setup###
 
 # [2026-11-06]_kpopmodder: [RESTORATION] 원본 시작 슬롯을 복원하고 다음 날 국뽕 슬롯 6개 지급 유지.
